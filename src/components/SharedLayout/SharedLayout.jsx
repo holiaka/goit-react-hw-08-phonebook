@@ -1,17 +1,24 @@
 import { Outlet } from "react-router-dom";
+import { useColorMode, Button } from "@chakra-ui/react";
 import { Container, HeaderNav, Link } from "./SharedLayout.styled";
 
 export const SharedLayout = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
         <Container>
             <header>
-                <HeaderNav>                    
+                <HeaderNav>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                 </HeaderNav>
                 <div>
-                    
+                    <Button colorScheme='teal' onClick={toggleColorMode}>
+                        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+                    </Button>
+
                 </div>
+
             </header>
             <Outlet />
             <footer>
