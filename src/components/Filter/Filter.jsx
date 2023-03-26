@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { searchKeyword } from "../../redux/sliceFilter";
-import { FilterInput, FilterTitle, FilterBox } from './Filter'
+import { FilterInput, FilterTitle, FilterBox } from './Filter.styled'
 
 
 export const Filter = () => {
