@@ -12,6 +12,10 @@ export const SharedLayout = () => {
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                 </HeaderNav>
+                <HeaderNav>
+                    <Link to="/registration">Register</Link>
+                    <Link to="/login">Log In</Link>
+                </HeaderNav>
                 <div>
                     <Button colorScheme='teal' onClick={toggleColorMode}>
                         Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
