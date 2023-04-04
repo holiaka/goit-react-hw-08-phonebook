@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { searchKeyword } from "../../redux/sliceFilter";
+import { searchKeyword } from "../../redux/contacts/sliceFilter";
 import { FilterInput, FilterTitle, FilterBox } from './Filter.styled'
 
 

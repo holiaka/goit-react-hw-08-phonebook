@@ -10,7 +10,7 @@ width: 620px;
   border: 1px dashed black;
 `;
 
-export const DeleteButton = styled.button`
+export const Button = styled.button`
   font-size: 20px;
   width: 100px;
   transition: 250ms, background-color;

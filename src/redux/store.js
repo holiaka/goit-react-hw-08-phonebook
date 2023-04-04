@@ -10,22 +10,24 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { contactReducer } from './sliceContacts';
-import { filterReducer } from './sliceFilter';
+import { contactReducer } from './contacts/sliceContacts';
+import { filterReducer } from './contacts/sliceFilter';
+import { authReducer } from './auth/sliceAuth';
 
 const persistConfig = {
-  key: 'contacts',
+  key: 'token',
   storage,
 };
 
-const persistedContactsReducer = persistReducer(persistConfig, contactReducer);
+const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 
 export const store = configureStore({
   reducer: {
-    contacts: persistedContactsReducer,
+    auth: persistedAuthReducer,
+    contacts: contactReducer,
     filter: filterReducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],

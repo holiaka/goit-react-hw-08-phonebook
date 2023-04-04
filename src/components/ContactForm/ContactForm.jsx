@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { selectContacts } from 'redux/selector';
+import { selectContacts } from 'redux/contacts/selector';
 import {
   ErrorText,
   SubmitForm,
@@ -10,12 +10,12 @@ import {
   InputName,
   SubmitBtn,
 } from './ContactForms';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 
 
 const initialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 const validationSchema = Yup.object({
@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
     .min(4, 'Too Short!')
     .max(50, 'Too Long!')
     .required('Required'),
-  phone: Yup.string()
+  number: Yup.string()
     .min(10, 'Too Short!')
     .max(20, 'Too Long!')
     .required('Required'),
@@ -43,13 +43,13 @@ export const ContactForm = () => {
 
   const oldContacts = useSelector(selectContacts);
 
-  const onSubmit = ({ name, phone }) => {
+  const onSubmit = ({ name, number }) => {
     const findContact = oldContacts.find(item => item.name === name);
 
     if (findContact) {
       alert("You have already added this person's data to Contact list!!!");
     } else {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
     }
   };
 
@@ -74,11 +74,11 @@ export const ContactForm = () => {
         <InputBox>
           <Input
             type="tel"
-            name="phone"
+            name="number"
             placeholder="Enter phone number"
             required
           ></Input>
-          <FormError name="phone" />
+          <FormError name="number" />
         </InputBox>
         <SubmitBtn type="submit">Add contact</SubmitBtn>
       </SubmitForm>

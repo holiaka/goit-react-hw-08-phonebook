@@ -6,8 +6,8 @@ import { Loader } from '../Loader/Loader';
 import { Error } from '../Error/Error';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { selectError, selectIsLoading } from 'redux/selector';
+import { fetchContacts } from 'redux/contacts/operations';
+import { selectError, selectIsLoading } from 'redux/contacts/selector';
 
 export const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);

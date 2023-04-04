@@ -1,19 +1,19 @@
 import { useSelector } from 'react-redux';
 import { ContactListItem } from 'components/ContactListItem/ContactListItem.jsx';
 import { Wrapper } from './ContactList.styled';
-import { selectVisibleContacts } from 'redux/selector';
+import { selectVisibleContacts } from 'redux/contacts/selector';
 
 export const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleContacts);
   
   return (
     <Wrapper>
-      {visibleContacts.map(({ id, name, phone }) => (
+      {visibleContacts.map(({ id, name, number }) => (
         <ContactListItem
           key={id}
           id={id}
           name={name}
-          number={phone}
+          number={number}
         ></ContactListItem>
       ))}
     </Wrapper>
