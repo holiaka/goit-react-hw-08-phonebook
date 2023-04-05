@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contacts/operations';
+import { deleteContact, editContact } from 'redux/contacts/operations';
 import { ContactText, Button, Item, TextContainer } from './ContactListItem';
 
 export const ContactListItem = ({ id, name, number }) => {
@@ -16,7 +16,7 @@ export const ContactListItem = ({ id, name, number }) => {
             <Button
         type="button"
         id={id}
-        onClick={() => dispatch(deleteContact(id))}
+        onClick={() => dispatch(editContact(id))}
       >
         Edit
       </Button>
