@@ -8,7 +8,13 @@ export const Container = styled.div`
     margin-right: auto;
 `
 
-export const HeaderNav = styled.header`
+export const Header = styled.header`
+    display: flex;
+    justify-content: space-between;
+
+`
+
+export const HeaderNav = styled.div`
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -19,7 +25,6 @@ export const Link = styled(NavLink)`
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
-    color: black;
     :hover{
         color: blue;
     }
