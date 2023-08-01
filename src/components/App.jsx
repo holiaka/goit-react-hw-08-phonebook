@@ -8,6 +8,7 @@ import { LogIn} from "../pages/LogIn"
 
 export const App = () => {  
   return (
+
     <div
       style={{
         display: 'flex',
@@ -28,6 +29,7 @@ export const App = () => {
           </Route>
         </Routes>
       </Suspense>       
-    </div>
+      </div>
+
   );
 };

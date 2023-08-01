@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components"
 
-
 export const Container = styled.div`
     width: 80%;
     margin-left: auto;
@@ -11,6 +10,8 @@ export const Container = styled.div`
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
+`
+export const HeaderSide = styled.div`
 
 `
 
