@@ -6,13 +6,21 @@ import { extendTheme } from '@chakra-ui/react';
 const config = {
   initialColorMode: 'light',
   useSystemColorMode: false,
-}
+};
 
 const overrides = {
-  config,  
-}
+  config,
+};
 
 // Extend the theme
-const theme = extendTheme({overrides})
+const theme = extendTheme({ overrides });
 
-export default theme
+export default theme;
+
+// My parameters for React elements
+
+// export const option = {
+  
+//   bgColor: useColorModeValue('white', 'gray.800'),
+//   textColor: useColorModeValue('gray.800', 'white')
+// };

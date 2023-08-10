@@ -1,7 +1,6 @@
 import { Link as ReactRouterLink, Outlet } from 'react-router-dom';
 import {
   useColorMode,
-  useColorModeValue,
   Button,
   Link as ChakraLink,
   Link,
@@ -17,9 +16,7 @@ import {
 export const SharedLayout = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const bg = useColorModeValue('red.500', 'red.200')
-    const color = useColorModeValue('white', 'gray.800')
-    const textColor = useColorModeValue('gray.800', 'white')
+  console.log(colorMode, toggleColorMode);
 
   return (
     <Container>
