@@ -15,9 +15,7 @@ import {
 
 export const SharedLayout = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-
-  console.log(colorMode, toggleColorMode);
-
+  
   return (
     <Container>
       <Header>
