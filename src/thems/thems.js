@@ -6,21 +6,26 @@ import { extendTheme } from '@chakra-ui/react';
 const config = {
   initialColorMode: 'light',
   useSystemColorMode: false,
+  textStyles: {
+    h1: {
+      // you can also use responsive styles
+      fontSize: ['48px', '100px'],
+      fontWeight: 'bold',
+      lineHeight: '110%',
+      letterSpacing: '-2%',
+    },
+    h2: {
+      fontSize: ['36px', '48px'],
+      fontWeight: 'semibold',
+      lineHeight: '110%',
+      letterSpacing: '-1%',
+    },
+  },
+  
 };
 
-const overrides = {
-  config,
-};
 
 // Extend the theme
-const theme = extendTheme({ overrides });
+const theme = extendTheme({ config });
 
 export default theme;
-
-// My parameters for React elements
-
-// export const option = {
-  
-//   bgColor: useColorModeValue('white', 'gray.800'),
-//   textColor: useColorModeValue('gray.800', 'white')
-// };

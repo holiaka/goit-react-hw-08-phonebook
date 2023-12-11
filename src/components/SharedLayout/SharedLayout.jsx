@@ -8,6 +8,7 @@ import {
 import { FaSun, FaMoon } from 'react-icons/fa';
 import {
   Container,
+  Footer,
   Header,
   HeaderNav,
   HeaderSide,
@@ -44,13 +45,12 @@ export const SharedLayout = () => {
         </HeaderSide>
       </Header>
       <Outlet />
-      <footer>
-        <div>
-          E-mail:{' '}
-          <Link href="mailto:golyaka.d@gmail.com">golyaka.d@gmail.com</Link>
-          Mobile: <Link href="tel:+380974239084">+38 (097) 423-90-84</Link>
-        </div>
-      </footer>
+      <Footer>
+      
+          <p>E-mail: <Link href="mailto:golyaka.d@gmail.com">golyaka.d@gmail.com</Link></p>
+          <p>Mobile: <Link href="tel:+380974239084">+38 (097) 423-90-84</Link></p>
+      
+      </Footer>
     </Container>
   );
 };
